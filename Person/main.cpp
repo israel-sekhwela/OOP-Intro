@@ -11,9 +11,6 @@ int	main(void)
 	cout << "=====================================\n\n";
 
 	cout << "Please enter you name: ";
-	cin >> p.
-	
-
 	
 	return (0);
 }
