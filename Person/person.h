@@ -1,6 +1,9 @@
 #ifndef	person_h
 #define	person_h
 
+#include <string>
+using namespace std;
+
 //class defination
 class	Person
 {
@@ -26,9 +29,11 @@ class	Person
 		float	getWeight();
 		float	getHeight();
 
-};
+		//print user details function
+		void	printDetails();
 
-//function to calculate BMI
-void	ft_calcluate_BMI(float userWeight, float userHeight);
+		//function to calculate BMI
+		void	ft_calculate_BMI();
+};
 
 #endif

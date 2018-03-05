@@ -1,3 +1,4 @@
+#include <iostream>
 #include "person.h"
 
 using namespace std;
@@ -11,7 +12,7 @@ Person :: Person()
 	weight = 0;
 }
 
-Person :: Person(string mName, int mAge, float mHeght, float mWeight)
+Person :: Person(string mName, int mAge, float mHeight, float mWeight)
 {
 	name = mName;
 	height = mHeight;
@@ -26,7 +27,7 @@ Person :: Person(string mName, int mAge, float mHeght, float mWeight)
 void	Person :: setName(string userName)
 {
 	// set the name variable to the argument passed
-	name = UserName;
+	name = userName;
 }
 
 void	Person :: setAge(int userAge)
@@ -39,7 +40,7 @@ void	Person :: setAge(int userAge)
 	if ((userAge > 0) && (userAge <= 120))
 		age = userAge;
 	else
-		cout "Invalid age.\n";
+		cout << "Invalid age.\n";
 }
 
 void	Person :: setHeight(float userHeight)
@@ -57,10 +58,10 @@ void	Person :: setWeight(float userWeight)
 string	Person :: getName()
 {
 	// return variable name
-	return (name)
+	return (name);
 }
 
-float	Person :: getAge()
+int	Person :: getAge()
 {
 	// return variable age
 	return (age);
@@ -72,16 +73,29 @@ float	Person :: getHeight()
 	return (height);
 }
 
-float	Person :: getWight()
+float	Person :: getWeight()
 {
 	// return variable weight
 	return (weight);
 }
 
-void	ft_calculate_BMI(int userWeight, float userHeight)
+
+void	Person :: printDetails()
+{
+	cout << endl;
+	cout << "The results are: " << endl;
+	cout << "================" << endl;
+	cout << "Name: " << name << endl;
+	cout << "Age: " << age << endl;
+	cout << "Height: " << height << endl;
+	cout << "Weight: " << weight << endl;
+}
+
+
+void	Person :: ft_calculate_BMI()
 {
 	float result;
 
-	result = userWeight / userHeight;
-	cout << "Your BMI is: " << (result / userHeight) << endl;
+	result = weight / height;
+	cout << "Your BMI is: " << (result / height) << endl;
 }
