@@ -22,22 +22,29 @@ int	main(){
 		if (choice == 2){
 			cout << "Height: ";
 			cin >> height;
-			r.setHeight;
+			r.setHeight(height);
 		}
 		else
 		if (choice == 3){
-			if (r.getWidth() == NULL){
+			if (r.getWidth() == 0){
 				cout << "Your results: \n";
 				cout << "-------------\n\n";
 				cout << "Height: " << r.getHeight() << endl;
 				cout << "Width: You have not entered width yet.\n";
 			}
 			else
-			if (r.getHeight() == NULL){
+			if (r.getHeight() == 0){
 				cout << "Your results: \n";
 				cout << "-------------\n\n";
 				cout << "Width: " << r.getWidth() << endl;
-				cout << "Height: You have not entered height yet.\n";	
+				cout << "Height: You have not entered height yet.\n";
+			}
+			else
+			if ((r.getHeight() == 0) && (r.getWidth() == 0)){
+				cout << "Your results: \n";
+				cout << "-------------\n\n";
+				cout << "Width: You have not entered height yet.\n;";
+				cout << "Height: You have not entered height yet.\n";
 			}
 			else{
 				cout << "The results: \n";
@@ -53,6 +60,9 @@ int	main(){
 		else{
 			cout << "Please select the right option, from 1 to 5." << endl;
 		}
+	r.displayMenu();
+	cout << "Choice: ";
+	cin >> choice;	
 	}
 	cout << "Thank You, good bye!" << endl;
 	return (0);

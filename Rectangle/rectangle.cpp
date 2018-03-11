@@ -1,6 +1,8 @@
 #include <iostream>
 #include "rectangle.h"
 
+using namespace std;
+
 Rectangle :: Rectangle(){
 	width = 0;
 	height = 0;
